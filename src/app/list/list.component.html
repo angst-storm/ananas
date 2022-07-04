@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Наименование</th>
+    <th>Адрес</th>
+    <th>ОГРН</th>
+    <th>ИНН</th>
+    <th>Дата регистрации</th>
+  </tr>
+  <tr *ngFor="let company of service.companies">
+    <td>{{company.name}}</td>
+    <td>{{company.address}}</td>
+    <td>{{company.ogrn}}</td>
+    <td>{{company.inn}}</td>
+    <td>{{company.regDate.toLocaleDateString()}}</td>
+  </tr>
+</table>
