@@ -10,3 +10,11 @@ th, td {
 .delete {
   border: none;
 }
+
+.inline-edit {
+  border: none;
+}
+
+.inline-edit:focus {
+  border: inherit;
+}

@@ -8,7 +8,7 @@
   </tr>
   <tr *ngFor="let company of companiesService.companies">
     <td>{{company.name}}</td>
-    <td>{{company.address}}</td>
+    <td><input class="inline-edit" [(ngModel)]="company.address"></td>
     <td>{{company.ogrn}}</td>
     <td>{{company.inn}}</td>
     <td>{{company.regDate.toLocaleDateString()}}</td>
