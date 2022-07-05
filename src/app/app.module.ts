@@ -1,16 +1,21 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 import {AppComponent} from './app.component';
 import {ListComponent} from './list/list.component';
-import {CompaniesService} from './services/companies.service';
-import {MatDialogModule} from "@angular/material/dialog";
 import {AddCompanyComponent} from './add-company/add-company.component';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
 import {InlineEditComponent} from './inline-edit/inline-edit.component';
 import {AutofocusDirective} from "./directives/autofocus.directive";
+import {CompaniesService} from './services/companies.service';
+
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
+import {MatListModule} from "@angular/material/list";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -18,7 +23,7 @@ import {AutofocusDirective} from "./directives/autofocus.directive";
     ListComponent,
     AddCompanyComponent,
     InlineEditComponent,
-    AutofocusDirective
+    AutofocusDirective,
   ],
   imports: [
     BrowserModule,
@@ -27,11 +32,17 @@ import {AutofocusDirective} from "./directives/autofocus.directive";
     ReactiveFormsModule,
     HttpClientModule,
     MatDialogModule,
+    MatCardModule,
+    MatButtonModule,
+    MatListModule,
+    MatInputModule,
   ],
   providers: [
     CompaniesService,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule {
 }

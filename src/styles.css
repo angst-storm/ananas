@@ -1,5 +1,9 @@
-@import '@angular/cdk/overlay-prebuilt.css';
+html, body {
+  height: 100%;
+}
 
-mat-dialog-container {
-  background-color: whitesmoke;
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #3949ab;
 }

@@ -1,18 +1,23 @@
 <form [formGroup]="form">
-  <label>
-    Имя: <input formControlName="name">
-  </label>
-  <label>
-    Адрес: <input formControlName="address">
-  </label>
-  <label>
-    ОГРН: <input formControlName="ogrn">
-  </label>
-  <label>
-    ИНН: <input formControlName="inn"><span [style.color]="'red'">*</span>
-  </label>
-  <label>
-    Дата регистрации: <input formControlName="regDate" type="date">
-  </label>
+  <mat-form-field>
+    <mat-label>Имя</mat-label>
+    <input formControlName="name" matInput>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Адрес</mat-label>
+    <input formControlName="address" matInput>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>ОГРН</mat-label>
+    <input formControlName="ogrn" matInput>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>ИНН</mat-label>
+    <input formControlName="inn" matInput>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Дата регистрации</mat-label>
+    <input formControlName="regDate" matInput type="date">
+  </mat-form-field>
 </form>
-<button (click)="submit()">Добавить</button>
+<button (click)="submit()" color="primary" mat-button>Добавить</button>

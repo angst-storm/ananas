@@ -1,4 +1,9 @@
-label {
+mat-form-field {
   display: block;
   margin-bottom: 5px;
+}
+
+button {
+  display: block;
+  margin: auto;
 }

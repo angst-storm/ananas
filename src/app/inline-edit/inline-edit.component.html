@@ -1,3 +1,5 @@
 <span (click)="this.edit = true" *ngIf="!edit">{{value}}</span>
-<input (focusout)="this.edit = false" *ngIf="edit" [(ngModel)]="value" (ngModelChange)="onValueChanged.emit(value)"
-       autofocus>
+<mat-form-field *ngIf="edit">
+  <textarea (focusout)="this.edit = false" (ngModelChange)="onValueChanged.emit(value)" [(ngModel)]="value"
+            autofocus cdkTextareaAutosize matInput></textarea>
+</mat-form-field>
