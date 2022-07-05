@@ -31,7 +31,7 @@ export class AddCompanyComponent {
         data.name,
         data.address,
         data.ogrn,
-        data.inn,
+        data.inn.trim(),
         data.regDate ? new Date(Date.parse(data.regDate)).toLocaleDateString() : data.regDate
       ));
       this.dialog.close();

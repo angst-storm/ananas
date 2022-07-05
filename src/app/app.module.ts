@@ -9,12 +9,16 @@ import {AddCompanyComponent} from './add-company/add-company.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {InlineEditComponent} from './inline-edit/inline-edit.component';
+import {AutofocusDirective} from "./directives/autofocus.directive";
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    AddCompanyComponent
+    AddCompanyComponent,
+    InlineEditComponent,
+    AutofocusDirective
   ],
   imports: [
     BrowserModule,

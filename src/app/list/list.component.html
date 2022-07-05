@@ -8,7 +8,9 @@
   </tr>
   <tr *ngFor="let company of companiesService.companies">
     <td>{{company.name}}</td>
-    <td><input class="inline-edit" [(ngModel)]="company.address"></td>
+    <td>
+      <inline-edit [value]="company.address" (onValueChanged)="company.address = $event"></inline-edit>
+    </td>
     <td>{{company.ogrn}}</td>
     <td>{{company.inn}}
       <button (click)="companiesService.downloadCompany(company)">Загрузить</button>
