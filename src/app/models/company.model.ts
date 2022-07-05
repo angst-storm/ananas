@@ -4,7 +4,7 @@ export class Company {
     public address: string,
     public ogrn: string,
     public inn: string,
-    public regDate: Date
+    public regDate: string
   ) {
   }
 }

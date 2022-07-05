@@ -10,8 +10,10 @@
     <td>{{company.name}}</td>
     <td><input class="inline-edit" [(ngModel)]="company.address"></td>
     <td>{{company.ogrn}}</td>
-    <td>{{company.inn}}</td>
-    <td>{{company.regDate.toLocaleDateString()}}</td>
+    <td>{{company.inn}}
+      <button (click)="companiesService.downloadCompany(company)">Загрузить</button>
+    </td>
+    <td>{{company.regDate}}</td>
     <td class="delete">
       <button (click)="deleteCompany(company)">X</button>
     </td>

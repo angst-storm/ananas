@@ -8,6 +8,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {AddCompanyComponent} from './add-company/add-company.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,10 +21,11 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     MatDialogModule,
   ],
   providers: [
-    CompaniesService
+    CompaniesService,
   ],
   bootstrap: [AppComponent]
 })

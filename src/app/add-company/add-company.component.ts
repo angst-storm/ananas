@@ -12,11 +12,11 @@ import {Company} from "../models/company.model";
 export class AddCompanyComponent {
   public form: FormGroup = new FormGroup(
     {
-      name: new FormControl('', Validators.required),
-      address: new FormControl('', Validators.required),
-      ogrn: new FormControl('', Validators.required),
+      name: new FormControl(''),
+      address: new FormControl(''),
+      ogrn: new FormControl(''),
       inn: new FormControl('', Validators.required),
-      regDate: new FormControl(new Date().toISOString().split('T')[0], Validators.required)
+      regDate: new FormControl('')
     }
   )
 
@@ -32,7 +32,7 @@ export class AddCompanyComponent {
         data.address,
         data.ogrn,
         data.inn,
-        new Date(Date.parse(data.regDate))
+        data.regDate ? new Date(Date.parse(data.regDate)).toLocaleDateString() : data.regDate
       ));
       this.dialog.close();
     }
