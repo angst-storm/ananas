@@ -7,6 +7,6 @@ import {CompaniesService} from "../services/companies.service";
   styleUrls: ['./list.component.css']
 })
 export class ListComponent {
-  constructor(public service: CompaniesService) {
+  constructor(public companiesService: CompaniesService) {
   }
 }

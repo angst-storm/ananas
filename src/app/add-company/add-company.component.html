@@ -1,0 +1,18 @@
+<form [formGroup]="form">
+  <label>
+    Имя: <input formControlName="name">
+  </label>
+  <label>
+    Адрес: <input formControlName="address">
+  </label>
+  <label>
+    ИНН: <input formControlName="ogrn">
+  </label>
+  <label>
+    ОГРН: <input formControlName="inn">
+  </label>
+  <label>
+    Дата регистрации: <input formControlName="regDate" type="date">
+  </label>
+</form>
+<button (click)="submit()">Добавить</button>
