@@ -3,9 +3,11 @@ import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {RouterModule, Routes} from "@angular/router";
 
 import {AppComponent} from './app.component';
-import {ListComponent} from './list/list.component';
+import {ListComponent} from "./list/list.component";
+import {TableComponent} from "./table/table.component";
 import {AddCompanyComponent} from './add-company/add-company.component';
 import {InlineEditComponent} from './inline-edit/inline-edit.component';
 import {AutofocusDirective} from "./directives/autofocus.directive";
@@ -17,6 +19,12 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatListModule} from "@angular/material/list";
 import {MatInputModule} from "@angular/material/input";
 
+const appRoutes: Routes =[
+  { path: 'list', component: ListComponent},
+  { path: 'table', component: TableComponent},
+  { path: '**', redirectTo: 'list'}
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +32,7 @@ import {MatInputModule} from "@angular/material/input";
     AddCompanyComponent,
     InlineEditComponent,
     AutofocusDirective,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +40,7 @@ import {MatInputModule} from "@angular/material/input";
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule.forRoot(appRoutes),
     MatDialogModule,
     MatCardModule,
     MatButtonModule,

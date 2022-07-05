@@ -1,0 +1,26 @@
+<a routerLink="/list" routerLinkActive="true">Список</a>
+<table>
+  <tr>
+    <th>Наименование</th>
+    <th>Адрес</th>
+    <th>ОГРН</th>
+    <th>ИНН</th>
+    <th>Дата регистрации</th>
+  </tr>
+  <tr *ngFor="let company of companiesService.companies">
+    <td>{{company.name}}</td>
+    <td class="address">
+      <inline-edit [value]="company.address" (onValueChanged)="company.address = $event"></inline-edit>
+    </td>
+    <td>{{company.ogrn}}</td>
+    <td>{{company.inn}}
+      <button (click)="companiesService.downloadCompany(company)" class="download" color="primary" mat-raised-button>
+        Загрузить
+      </button>
+    </td>
+    <td>{{company.regDate}}</td>
+    <td class="delete">
+      <button (click)="deleteCompany(company)" color="warn" mat-raised-button>Удалить</button>
+    </td>
+  </tr>
+</table>
