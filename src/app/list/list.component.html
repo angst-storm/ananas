@@ -12,5 +12,8 @@
     <td>{{company.ogrn}}</td>
     <td>{{company.inn}}</td>
     <td>{{company.regDate.toLocaleDateString()}}</td>
+    <td class="delete">
+      <button (click)="deleteCompany(company)">X</button>
+    </td>
   </tr>
 </table>
