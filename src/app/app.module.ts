@@ -20,9 +20,9 @@ import {MatListModule} from "@angular/material/list";
 import {MatInputModule} from "@angular/material/input";
 
 const appRoutes: Routes =[
-  { path: 'list', component: ListComponent},
   { path: 'table', component: TableComponent},
-  { path: '**', redirectTo: 'list'}
+  { path: 'list', component: ListComponent},
+  { path: '**', redirectTo: 'table'}
 ];
 
 @NgModule({

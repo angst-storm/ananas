@@ -1,5 +1,7 @@
 # Список компаний
 
+## О проекте:
+
 ### Структура проекта:
 
 - src
@@ -25,6 +27,15 @@
 - Модальные окна, как и многие стили, взяты из angular material для экономии времени. Сам я реализовывал модальное окно [здесь](https://github.com/angst-storm/curly-life/tree/master/src/app/shared/modal)
 - В add-company обязательное поле только ИНН, так как остальное можно загрузить по нему
 
-### Демонстрация
+## Демонстрация
+
+[Развернуто на Heroku](https://angst-storm-ananas.herokuapp.com/)
 
 <img src="./readme_assets/demo.gif" alt="demo">
+
+## Запуск
+
+```
+npm install
+ng serve
+```
